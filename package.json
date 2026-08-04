@@ -1,0 +1,25 @@
+{
+  "name": "coursera-project",
+  "version": "1.0.0",
+  "description": "This is coursera javaScript  project.",
+  "keywords": [
+    "javaScript",
+    "node",
+    "backend"
+  ],
+  "homepage": "https://github.com/solijonov06/javaScriptCourse#readme",
+  "bugs": {
+    "url": "https://github.com/solijonov06/javaScriptCourse/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solijonov06/javaScriptCourse.git"
+  },
+  "license": "MIT",
+  "author": "Tony",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run start"
+  }
+}

@@ -71,7 +71,7 @@ for(let i =1; i<=10; i++){
 // let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink'];
 // listArrayItems(colors);
 
-function letterFinder(word, match) {
+/*function letterFinder(word, match) {
     for(var i = 0; i < word.length; i++) {
         if(word[i] == match) {
             //check if the current characater, word[i], is equal to the match
@@ -82,4 +82,29 @@ function letterFinder(word, match) {
     }
 }
 
-letterFinder("test", "t")
+letterFinder("test", "t")*/
+
+let greet = "Hello";
+let user = "John";
+// console.log(greet.pop())
+// console.log(greet.concat(user));  //The concat() method joins two strings: 
+// console.log(greet + " " + user);
+
+// console.log(greet.charAt(3)); // returns the character at index 3
+// console.log("Wo".concat("rl").concat("d")); // 'World'
+// console.log("ho-ho-ho".split("-")); // ['ho', 'ho', 'ho'] The split method chops up the string into an array of sub-strings:
+
+let clothes =[];
+clothes.push("T-shirt");
+clothes.push("Jeans");
+clothes.push("Jacket");
+clothes.push("Socks");
+console.log(clothes); // ["T-shirt", "Jeans", "Jacket", "Socks"]
+clothes.pop(); // removes the last item from the array
+console.log(clothes); // ["T-shirt", "Jeans", "Jacket"]
+clothes.shift(); // removes the first item from the array
+console.log(clothes);
+clothes.push("Hat"); // adds an item to the end of the array
+console.log(clothes);
+clothes.unshift("Shoes"); // adds an item to the beginning of the array
+console.log("==========");

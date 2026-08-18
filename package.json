@@ -20,6 +20,6 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "npm run start"
+    "start": "node index.js"
   }
 }

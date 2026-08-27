@@ -186,7 +186,7 @@ console.log("==========");
 //         console.log(a + b);}
 // }
 // addTwoNums("5", 5);
-
+/**
 function addTwoNums(a,b) {
     try {
         if(typeof(a) != 'number') {
@@ -203,3 +203,15 @@ function addTwoNums(a,b) {
 addTwoNums(5, 1)
 console.log("It still works")
 console.log("==========");
+*/
+
+/** */
+function consoleStyler(color, background, fontsize, txt){
+    let message = "%C" + txt;
+    let style = `color: ${color};`;
+    style += `background: ${background};`;
+    style += `font-size: ${fontSize};`;
+
+    console.log(message, style);
+
+}

@@ -132,9 +132,11 @@ console.log(test); // object*/
 // let greet = "Hello";
 // let user = "John";
 // let car = {};
+
+
 console.log("==========");
 
-// function myFunc(a,b) {
+/*// function myFunc(a,b) {
 //     c= a+b
 //     console.log(c);
 // }
@@ -185,7 +187,7 @@ console.log("==========");
 //     }else{
 //         console.log(a + b);}
 // }
-// addTwoNums("5", 5);
+// addTwoNums("5", 5); */
 /**
 function addTwoNums(a,b) {
     try {
@@ -206,7 +208,7 @@ console.log("==========");
 */
 
 /** */
-function consoleStyler(color, background, fontsize, txt){
+/*function consoleStyler(color, background, fontsize, txt){
     let message = "%C" + txt;
     let style = `color: ${color};`;
     style += `background: ${background};`;
@@ -214,4 +216,310 @@ function consoleStyler(color, background, fontsize, txt){
 
     console.log(message, style);
 
+}*/
+
+
+//var keyword
+/*//1.We can access a var variable before initializitation...
+//...as long as the var variable is eventually initialized anywhere in your code
+// console.log(user);
+
+// // 2. We can declare and redeclare the same var variable without errors
+// var user = "John";
+// var user = "Jane";
+// var user = "Jack";
+// console.log(user);
+
+//var user
+//let keyword
+//1. We cannot access a let variable before initialization
+// console.log(user); // ReferenceError: Cannot access 'user' before initialization
+// let user ;
+// console.log(user);
+
+//3.We cant redeclare a let variable
+//  let user = "Anna"
+
+//4. We can reassign a let variable
+// user = "John";
+// console.log(user); // John
+
+//const keyword
+//1. We cannot access a const variable before initialization
+// console.log(user); // ReferenceError: Cannot access 'user' before initialization
+// const user ;
+
+// 2.we cant access the const variable before initialization
+// console.log(user); // ReferenceError: Cannot access 'user' before initialization
+// const user = "John";
+
+// 3. We cant redeclare a const variable
+// const user = "Anna" */
+// #region Object Oriented Programming (OOP) Example
+//Object Oriented Programming (OOP) is a programming paradigm that uses objects and classes to structure code. It allows for encapsulation, inheritance, and polymorphism, making it easier to manage and maintain complex software systems.
+
+/*const purchase1 = {
+    shoes: 100,
+    statetax: 1.2,
+    totalPrice: function(){
+        const calculation = this.shoes * this.statetax;
+        console.log('Total Price:', calculation);
+    }
+
 }
+purchase1.totalPrice();
+console.log('State Tax:', purchase1.statetax);*/
+//functional proggramming approach
+/*let shoes = 100;
+let statetax = 1.2;
+
+function totalPrice(shoes, statetax) {
+    return shoes * statetax;
+}
+
+const toPay = totalPrice(shoes, statetax);
+console.log('Total Price:', toPay);
+*/
+//OOP approach
+/*const purchase2 = {
+    shoes: 50,
+    statetax: 1.2,
+    totalPrice: function() {
+        const calculation = this.shoes * this.statetax;
+        console.log('Total Price 2:', calculation);
+    }
+
+}
+purchase2.totalPrice();
+console.log('State Tax:', purchase2.statetax);*/
+// #region Class
+/*class Car {
+    constructor(color, speed){
+        this.color = color;
+        this.speed = speed;
+    }
+    turboOn(){
+        console.log("Turbo is on");
+    }
+}
+const car1 = new Car("red", 200);
+car1.turboOn();
+class Animal { }
+
+var myDog = new Animal()
+
+console.log (Animal)
+console.log (myDog)*/
+
+/*class Car {
+    engineOn(){
+        console.log("Engine is on");
+    }
+}
+class SportsCar extends Car {
+    engineOn(){
+        super.engineOn();
+        console.log("SportsCarTurbo is on");
+    }
+}
+class Truck extends Car {
+    engineOn(){
+        console.log("TruckTurbo is on");
+    }
+}
+const mySportsCar = new SportsCar();
+mySportsCar.engineOn();
+const myTruck = new Truck();
+myTruck.engineOn();
+*/
+// #region Inheritance
+/*const bird = {
+    hasWings: true,
+    canFly: true,
+    layEggs: function() {
+        console.log("The bird lays eggs.");
+    }
+}
+const eagle1 = Object.create(bird);
+console.log("eagle1:", eagle1);
+eagle1.layEggs();
+console.log("eagle1 has wings:", eagle1.hasWings);
+console.log("eagle1 can fly:", eagle1.canFly);
+
+const eagle2 = Object.create(bird);
+console.log("eagle2:", eagle2);
+eagle2.layEggs();
+console.log("eagle2 has wings:", eagle2.hasWings);
+console.log("eagle2 can fly:", eagle2.canFly);
+
+const penguin1 = Object.create(bird);
+penguin1.canFly = false;
+console.log("penguin1:", penguin1);
+penguin1.layEggs();
+console.log("penguin1 has wings:", penguin1.hasWings);
+console.log("penguin1 can fly:", penguin1.canFly);
+*/
+class Train{
+    constructor(color,lightsOn){
+        this.color = color;
+        this.lightsOn = lightsOn;
+    }
+    toggleLights(){
+        this.lightsOn = !this.lightsOn;
+    }
+    lightStatus(){
+    console.log("Lights on?", this.lightsOn);
+    }
+    getSelf(){
+        console.log(this);
+    }
+    getPrototype(){
+        const proto = Object.getPrototypeOf(this);
+        console.log(proto);
+    }
+}
+// const train1 = new Train("red", false);
+// train1.lightStatus();
+// train1.toggleLights();
+// train1.getPrototype();
+// train1.getSelf();
+
+/*class HighSpeedTrain extends Train{
+    constructor(passengers, highSpeedOn, color, lightsOn){
+        super(color, lightsOn);
+        this.passengers = passengers;
+        this.highSpeedOn = highSpeedOn;
+    }
+    toggleHighSpeed(){
+        this.highSpeedOn = !this.highSpeedOn;
+        console.log("High speed status:", this.highSpeedOn);
+    }
+    toggleLights(){ 
+    super.toggleLights();
+    super.lightStatus();
+    console.log("Lights are 100% operational.");
+    }
+}
+
+// const myFirstTrain = new Train("red", false);
+// console.log("myFirstTrain:", myFirstTrain);
+// const mySecondTrain = new Train("blue", true);
+// console.log("mySecondTrain:", mySecondTrain);
+// myFirstTrain.toggleLights();
+// myFirstTrain.lightStatus();
+// mySecondTrain.toggleLights();
+// mySecondTrain.lightStatus();
+const myHighSpeedTrain = new HighSpeedTrain(200, false, "green", true);
+console.log("myHighSpeedTrain:", myHighSpeedTrain);
+myHighSpeedTrain.toggleLights();
+myHighSpeedTrain.toggleHighSpeed();*/
+
+/*class WithDefaultParams{
+    constructor(num1= 1, num2= 2, num3= 3, string1 = "Result:", boolean1 = true){
+        this.num1 = num1;
+        this.num2 = num2;
+        this.num3 = num3;
+        this.string1 = string1;
+        this.boolean1 = boolean1;
+    }
+    calculate(){
+        if(this.boolean1){
+            console.log(this.string1, this.num1 + this.num2 + this.num3);
+            return
+        }
+        return "The value of boolean1 is incorrect"
+}
+}
+const better = new WithDefaultParams();
+better.calculate();// Result: 6*/
+
+class Animal {
+    constructor(color = "yellow", energy = 100){
+        this.color = color;
+        this.energy = energy;
+    }
+    isActive(){
+        if(this.energy > 0){
+            this.energy -= 20;
+            console.log("Energy is decreasing, currently at:", this.energy)
+        }else if(this.energy == 0){
+            this.sleep
+        }
+    }
+    sleep(){
+        this.energy +=20;
+        console.log('Energy is encreasing, currently at:', this.energy)
+    }
+    getColor(){
+        console.log(this.color)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log("==========");

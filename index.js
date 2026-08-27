@@ -213,6 +213,7 @@ console.log("==========");
 //     style += `font-size: ${fontSize};`;
 //     console.log(message, style);*/
 // #region new code starts here
+/*
 class Animal {
     constructor(color= "yellow", energy = 100){
         this.color = color;
@@ -328,3 +329,46 @@ leo.makeSound(true); // purr, meow
 const cuddles = new Tiger();
 cuddles.makeSound(false); // Roar!
 cuddles.makeSound(true); // purr, Roar!v
+*/
+// Task 1: Code a Person class
+class Person {
+    constructor(name = "Tom", age = 20, energy = 100) {
+        this.name = name;
+        this.age = age;
+        this.energy = energy
+    }
+    sleep() {
+        this.energy += 10
+        console.log("Energy is increasing, current level at", this.energy)
+    }
+    doSomethingFun() {
+        this.energy -= 10;
+        console.log("Energy is decreasing, current level at", this.energy)
+    }
+}
+
+// Task 2: Code a Worker class
+class Worker extends Person {
+    constructor(name, age, energy, xp = 0, hourlyWage = 10){
+        super(name,age,energy)
+        this.xp = xp
+        this.hourlyWage = hourlyWage
+    }
+    goToWork() {
+        this.xp += 10;
+    }
+}
+
+// Task 3: Code an intern object, run methods
+function intern() {
+    const internWorker = new Worker("Bob", 21, 110, 0, 10);
+    internWorker.goToWork();
+    return internWorker;
+}
+
+// Task 4: Code a manager object, methods
+function manager() {
+    const managerWorker = new Worker("Alice", 30, 120, 100, 30);
+    managerWorker.doSomethingFun();
+    return managerWorker;
+}

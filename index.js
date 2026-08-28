@@ -213,8 +213,47 @@ console.log("==========");
     let style = `color: ${color};`;
     style += `background: ${background};`;
     style += `font-size: ${fontSize};`;
+/* function consoleStyler(color, background, fontsize, txt){
+//     let message = "%C" + txt;
+//     let style = `color: ${color};`;
+//     style += `background: ${background};`;
+//     style += `font-size: ${fontSize};`;
+//     console.log(message, style);*/
+// #region new code starts here
+/*
+class Animal {
+    constructor(color= "yellow", energy = 100){
+        this.color = color;
+        this.energy = energy;
+    }
+    isActive(){
+        if(this.energy >0){
+            this.energy -=20;
+            console.log("energy is decreasing, current level:", this.energy)
+        }else if(this.energy == 0){
+            this.sleep();
+        }
+    }
+    sleep(){
+        this.energy +=20;
+        console.log("energy is increasing, current level at", this.energy)
+    }
+    getColor(){
+        console.log(this.color)
+    }
+}
 
-    console.log(message, style);
+class Cat extends Animal{
+    constructor(sound = "purr", canJumpHigh = true, canClimbTrees = true, color,energy){
+        super(color,energy);
+        this.sound = sound;
+        this.canJumpHigh = canJumpHigh;
+        this.canClimbTrees = canClimbTrees
+    }
+    makeSound(){
+        console.log(this.sound)
+    }
+}
 
 }*/
 
@@ -523,3 +562,127 @@ class Animal {
 
 
 console.log("==========");
+class Bird extends Animal{
+    constructor(sound= "chirp", canFly = true, color, energy){
+        super(color,energy);
+        this.canFly = canFly;
+        this.sound = sound;
+    }
+    makeSound(){
+        console.log(this.sound)
+    }
+}
+class HouseCat extends Cat{
+    constructor(houseCatSound = "meow", canJumpHigh,sound,canClimpTrees, color, energy){
+        super(color,sound, energy, canClimpTrees,canJumpHigh)
+        this.houseCatSound = houseCatSound
+    }
+    makeSound(option){
+        if(option){
+            super.makeSound()
+        }
+        console.log(this.houseCatSound)
+    }
+}
+class Tiger extends Cat{
+    constructor(tigerSound = "Roar",sound,canClimbTrees,canJumpHigh,color,energy){
+        super(sound,color,energy,canClimbTrees,canJumpHigh)
+        this.tigerSound = tigerSound
+    }
+    makeSound(option){
+        if(option){
+            super.makeSound()
+        }
+        console.log(this.tigerSound)
+    }
+}
+class Parrot extends Bird{
+    constructor(canTalk = false, sound, canFly, color, energy){
+        super(sound, color,canFly,energy);
+        this.canTalk = canTalk
+    }
+    makeSound(option){
+        if(option){
+            super.makeSound()
+        }
+        if(this.canTalk){
+            console.log("Im talking a parrot")
+        }
+    }
+}
+const fiji = new Parrot(false); // we're passing `false` to the constructor so that fiji can't talk
+const polly = new Parrot(true); // we're passing `true` to the constructor so that polly can talk
+
+fiji.makeSound(); // undefined
+fiji.makeSound(true); // chirp
+
+polly.makeSound(); // I'm a talking parrot!
+polly.makeSound(true); // chirp, I'm a talking parrot!
+
+polly.color; // yellow
+polly.energy; // 100
+
+polly.isActive(); // Energy is decreasing, currently at: 80
+
+const penguin = new Bird("shriek", false, "black and white", 200); // setting all the custom properties
+penguin; // Bird {color: 'black and white', energy: 200, sound: 'shriek', canFly: false }
+
+penguin.sound; // 'shriek'
+penguin.canFly; // false
+penguin.color; // 'black and white'
+penguin.energy; // 200
+penguin.isActive(); // Energy is decreasing, currently at: 180
+
+const leo = new HouseCat();
+
+// leo, no purring please:
+leo.makeSound(false); // meow
+// leo, both purr and meow now:
+leo.makeSound(true); // purr, meow
+
+const cuddles = new Tiger();
+cuddles.makeSound(false); // Roar!
+cuddles.makeSound(true); // purr, Roar!v
+
+// Task 1: Code a Person class
+class Person {
+    constructor(name = "Tom", age = 20, energy = 100) {
+        this.name = name;
+        this.age = age;
+        this.energy = energy
+    }
+    sleep() {
+        this.energy += 10
+        console.log("Energy is increasing, current level at", this.energy)
+    }
+    doSomethingFun() {
+        this.energy -= 10;
+        console.log("Energy is decreasing, current level at", this.energy)
+    }
+}
+
+// Task 2: Code a Worker class
+class Worker extends Person {
+    constructor(name, age, energy, xp = 0, hourlyWage = 10){
+        super(name,age,energy)
+        this.xp = xp
+        this.hourlyWage = hourlyWage
+    }
+    goToWork() {
+        this.xp += 10;
+    }
+}
+
+// Task 3: Code an intern object, run methods
+function intern() {
+    const internWorker = new Worker("Bob", 21, 110, 0, 10);
+    internWorker.goToWork();
+    return internWorker;
+}
+
+// Task 4: Code a manager object, methods
+function manager() {
+    const managerWorker = new Worker("Alice", 30, 120, 100, 30);
+    managerWorker.doSomethingFun();
+    return managerWorker;
+}

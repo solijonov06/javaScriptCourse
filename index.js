@@ -331,7 +331,7 @@ cuddles.makeSound(false); // Roar!
 cuddles.makeSound(true); // purr, Roar!v
 */
 // Task 1: Code a Person class
-class Person {
+/*class Person {
     constructor(name = "Tom", age = 20, energy = 100) {
         this.name = name;
         this.age = age;
@@ -372,3 +372,72 @@ function manager() {
     managerWorker.doSomethingFun();
     return managerWorker;
 }
+*/
+/*const car ={
+    engine: true,
+    steering: true,
+    speed: "slow"
+}
+const sportsCar = Object.create(car);
+sportsCar.speed = "fast";
+console.log("The sports car object", sportsCar);
+
+console.log("-----for in is unreliabel");
+for(props in sportsCar){
+    console.log(props);
+};
+console.log("--------Iterating oer object and its prototype");
+console.log("-------for of is reliable_____");
+for(props of Object.keys(sportsCar)){
+    console.log(props + ":" + sportsCar[props])
+}
+let greet = "Hello";
+let place = "World";
+//console.log(`${greet} ${place}!`) //display both variables using template literals
+console.log(greet + place)
+*/
+//ES6 variable interpolation
+/*let first = "1";
+let second = "2";
+console.log(`${first}-You know what${second}`)
+//ES6 Multiple line template literals
+let multipline = `
+    hey
+    are 
+    you
+    here`;
+console.log(multipline)
+//ES5 sterings
+let noMultiline = "hey,bro";
+console.log("did you know that" + noMultiline)*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log("==========")

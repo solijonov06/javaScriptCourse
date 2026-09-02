@@ -398,7 +398,7 @@ penguin1.layEggs();
 console.log("penguin1 has wings:", penguin1.hasWings);
 console.log("penguin1 can fly:", penguin1.canFly);
 */
-/*class Train{
+/*/*class Train{
     constructor(color,lightsOn){
         this.color = color;
         this.lightsOn = lightsOn;
@@ -422,7 +422,7 @@ console.log("penguin1 can fly:", penguin1.canFly);
 // train1.toggleLights();
 // train1.getPrototype();
 // train1.getSelf();
-
+*/
 /*class HighSpeedTrain extends Train{
     constructor(passengers, highSpeedOn, color, lightsOn){
         super(color, lightsOn);
@@ -470,9 +470,9 @@ myHighSpeedTrain.toggleHighSpeed();*/
 }
 }
 const better = new WithDefaultParams();
-better.calculate();// Result: 6
-*/
-/*class Animal {
+better.calculate();// Result: 6*/
+
+class Animal {
     constructor(color = "yellow", energy = 100){
         this.color = color;
         this.energy = energy;
@@ -493,8 +493,12 @@ better.calculate();// Result: 6
         console.log(this.color)
     }
 }
-*/
+
 /*console.log("==========");
+}*/
+
+/*
+console.log("==========");
 class Bird extends Animal{
     constructor(sound= "chirp", canFly = true, color, energy){
         super(color,energy);
@@ -576,9 +580,9 @@ leo.makeSound(true); // purr, meow
 const cuddles = new Tiger();
 cuddles.makeSound(false); // Roar!
 cuddles.makeSound(true); // purr, Roar!v
-
+*/
 // Task 1: Code a Person class
-class Person {
+/*class Person {
     constructor(name = "Tom", age = 20, energy = 100) {
         this.name = name;
         this.age = age;
@@ -617,47 +621,4 @@ function intern() {
 function manager() {
     const managerWorker = new Worker("Alice", 30, 120, 100, 30);
     managerWorker.doSomethingFun();
-    return managerWorker;
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-console.log("==========")
+    // return managerWorker*/

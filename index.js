@@ -398,7 +398,7 @@ penguin1.layEggs();
 console.log("penguin1 has wings:", penguin1.hasWings);
 console.log("penguin1 can fly:", penguin1.canFly);
 */
-class Train{
+/*class Train{
     constructor(color,lightsOn){
         this.color = color;
         this.lightsOn = lightsOn;
@@ -470,9 +470,9 @@ myHighSpeedTrain.toggleHighSpeed();*/
 }
 }
 const better = new WithDefaultParams();
-better.calculate();// Result: 6*/
-
-class Animal {
+better.calculate();// Result: 6
+*/
+/*class Animal {
     constructor(color = "yellow", energy = 100){
         this.color = color;
         this.energy = energy;
@@ -493,75 +493,8 @@ class Animal {
         console.log(this.color)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-console.log("==========");
+*/
+/*console.log("==========");
 class Bird extends Animal{
     constructor(sound= "chirp", canFly = true, color, energy){
         super(color,energy);
@@ -686,3 +619,45 @@ function manager() {
     managerWorker.doSomethingFun();
     return managerWorker;
 }
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log("==========")
